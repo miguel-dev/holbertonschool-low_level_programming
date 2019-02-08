@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char digit1;
-	char digit2;
+	int digit1;
+	int digit2;
 
 	for (digit1 = 48; digit1 <= 57; digit1++)
 	{
