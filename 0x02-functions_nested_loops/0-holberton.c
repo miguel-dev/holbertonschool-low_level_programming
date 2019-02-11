@@ -1,8 +1,9 @@
 #include "holberton.h"
 
-/* Program for printing Holberton, followed by a new line.
+/**
+ *  main - Program for printing Holberton, followed by a new line.
  *
- *
+ * Return: Always 0.
  */
 
 int main(void)
