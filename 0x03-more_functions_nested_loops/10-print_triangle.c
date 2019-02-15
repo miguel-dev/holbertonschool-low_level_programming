@@ -10,6 +10,8 @@ void print_triangle(int size)
 	int r;
 	int c;
 
+	if (size == 0)
+		_putchar('\n');
 	for (r = 1; r <= size; r++)
 	{
 		for (c = 0; c < size; c++)
