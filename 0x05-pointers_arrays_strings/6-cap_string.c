@@ -10,26 +10,26 @@
 char *cap_string(char *s)
 {
 	char separators[13] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
-	int word;
+	int index;
 	int sep;
-	int cap;
 
-	cap = 0;
-	while (s[cap] != '\0')
+	index = 0;
+	while (s[index] != '\0')
 	{
 		sep = 0;
 		while (sep <= 13)
 		{
-			if (s[cap] != separators[sep])
+			if (s[index] == separators[sep])
 			{
-				if (s[cap] >= 97 && s[cap] <= 122)
+				if (s[index + 1] >= 97 && s[index + 1] <= 122)
 				{
-					s[cap] = s[cap] - 32;
+					s[index + 1] = s[index + 1] - 32;
+					break;
 				}
 			}
 			sep++;
 		}
-		cap++;
+		index++;
 	}
 	return (s);
 }
