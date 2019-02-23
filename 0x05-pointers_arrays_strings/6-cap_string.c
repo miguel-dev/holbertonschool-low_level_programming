@@ -24,7 +24,6 @@ char *cap_string(char *s)
 				if (s[index + 1] >= 97 && s[index + 1] <= 122)
 				{
 					s[index + 1] = s[index + 1] - 32;
-					break;
 				}
 			}
 			sep++;
