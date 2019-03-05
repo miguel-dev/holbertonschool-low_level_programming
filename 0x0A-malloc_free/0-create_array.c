@@ -7,7 +7,7 @@
  * @c: char to initialize the array.
  *
  * Return: NULL if size is 0. Othwerise returns the pointer to the array,
- * or NULL if it fails..
+ * or NULL if it fails.
  */
 
 char *create_array(unsigned int size, char c)
@@ -34,6 +34,7 @@ char *create_array(unsigned int size, char c)
 		a[i] = c;
 		i++;
 	}
+	a[size] = 0;
 
 	return (a);
 }
