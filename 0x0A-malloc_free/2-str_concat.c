@@ -15,25 +15,25 @@ char *str_concat(char *s1, char *s2)
 	char *s3;
 	int len1, len2, con_1, con_2, s3_size;
 
+	if (s1 == 0)
+		s1 = "";
+
+	if (s2 == 0)
+		s2 = "";
+
 	len1 = 0;
 	while (s1[len1] != 0)
-	{
 		len1++;
-	}
 
 	len2 = 0;
 	while (s2[len2] != 0)
-	{
 		len2++;
-	}
 
 	s3_size = (len1 + len2) + 1;
 	s3 = malloc(s3_size * sizeof(char));
 
 	if (s3 == 0)
-	{
 		return (0);
-	}
 
 	con_1 = 0;
 	while (con_1 < len1)
