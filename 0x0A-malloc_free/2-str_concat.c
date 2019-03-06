@@ -36,19 +36,18 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	con_1 = 0;
-	while (con_1 < len1 && s1 != 0)
+	while (con_1 < len1)
 	{
 		s3[con_1] = s1[con_1];
 		con_1++;
 	}
 
 	con_2 = 0;
-	while (con_2 < len2 && s2 != 0)
+	while (con_2 < len2)
 	{
 		s3[con_1] = s2[con_2];
 		con_1++;
 		con_2++;
 	}
-	s3[s3_size + 1] = 0;
 	return (s3);
 }
