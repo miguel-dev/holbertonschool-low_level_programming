@@ -49,6 +49,6 @@ char *str_concat(char *s1, char *s2)
 		con_1++;
 		con_2++;
 	}
-	s3[s3_size] = 0;
+	s3[s3_size + 1] = 0;
 	return (s3);
 }
