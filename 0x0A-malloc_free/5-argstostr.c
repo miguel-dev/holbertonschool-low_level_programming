@@ -27,10 +27,11 @@ char *argstostr(int ac, char **av)
 			size_args++;
 			j++;
 		}
+		size_args++;
 		i++;
 	}
 
-	args = (char *)malloc(size_args * sizeof(char));
+	args = (char *)malloc((size_args + 1) * sizeof(char));
 	if (args == 0)
 		return (0);
 
