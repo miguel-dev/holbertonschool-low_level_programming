@@ -46,7 +46,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	con_s2 = 0;
-	while (con_s2 <= n)
+	while (con_s2 < n)
 	{
 		s[con_s1 + con_s2] = s2[con_s2];
 		con_s2++;
