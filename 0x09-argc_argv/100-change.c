@@ -10,7 +10,7 @@
  * Return: 0 is successful. 1 otherwise.
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int money, coins;
 	int change;
@@ -24,6 +24,7 @@ int main (int argc, char *argv[])
 	if (money < 0)
 	{
 		printf("0\n");
+		return (1);
 	}
 
 	coins = money / 25;
@@ -36,6 +37,6 @@ int main (int argc, char *argv[])
 	change = change % 2;
 	coins += change;
 	printf("%d\n", coins);
-		
+
 	return (0);
 }
