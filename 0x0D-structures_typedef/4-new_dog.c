@@ -28,7 +28,6 @@ char *_strdup(char *str)
 
 	if (str2 == 0)
 	{
-		free(str2);
 		return (0);
 	}
 
