@@ -3,7 +3,8 @@
 
 int main(int argc, char argv[])
 {
-	int (*p) (int argc, char argv[]);
+	int (*p)(int argc, char argv[]);
+
 	p = &main;
 
 	if (argc != 2)
