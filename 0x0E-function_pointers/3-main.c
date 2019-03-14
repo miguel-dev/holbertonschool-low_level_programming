@@ -21,6 +21,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3] == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	operator = argv[2];
 
 	operation = get_op_func(operator);
@@ -33,12 +39,6 @@ int main(int argc, char *argv[])
 
 	term1 = atoi(argv[1]);
 	term2 = atoi(argv[3]);
-
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3] == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 
 	printf("%d\n", operation(term1, term2));
 	return (0);
