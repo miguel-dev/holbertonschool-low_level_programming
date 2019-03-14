@@ -41,4 +41,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d\n", operation(term1, term2));
+	return (0);
 }
