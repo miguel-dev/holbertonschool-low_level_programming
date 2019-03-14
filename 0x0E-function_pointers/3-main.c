@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	operation = get_op_func(operator);
 
-	if (operation == 0)
+	if (operation == 0 || argv[2][1] != 0)
 	{
 		printf("Error\n");
 		exit(99);
