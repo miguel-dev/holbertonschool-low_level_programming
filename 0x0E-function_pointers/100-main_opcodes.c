@@ -9,9 +9,9 @@
  * Return: 0 if sucessful.
  */
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
-	int (*p)(int argc, char argv[]);
+	int (*p)(int argc, char *argv[]);
 
 	p = &main;
 
