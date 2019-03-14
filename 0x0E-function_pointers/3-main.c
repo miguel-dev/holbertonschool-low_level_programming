@@ -23,7 +23,9 @@ int main(int argc, char *argv[])
 
 	operator = argv[2];
 
-	if (operator == 0)
+	operation = get_op_func(operator);
+
+	if (operation == 0)
 	{
 		printf("Error\n");
 		exit(99);
@@ -38,6 +40,5 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	operation = &(get_op_func(operator)(term1, term2));
-	printf("%d", operation(term1, term2));
+	printf("%d\n", operation(term1, term2));
 }
