@@ -21,7 +21,7 @@ size_t print_list(const list_t *h)
 		if (!iterator->str)
 			printf("[0] (nil)\n");
 		else
-			printf("[%d] (%s)\n", iterator->len, iterator->str);
+			printf("[%d] %s\n", iterator->len, iterator->str);
 		if (iterator->next)
 			iterator = iterator->next;
 		else
