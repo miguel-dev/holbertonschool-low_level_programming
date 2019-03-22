@@ -19,11 +19,6 @@ size_t list_len(const list_t *h)
 	{
 		n++;
 		iterator = iterator->next;
-		if (!iterator->next)
-		{
-			n++;
-			break;
-		}
 	}
 	return (n);
 }
