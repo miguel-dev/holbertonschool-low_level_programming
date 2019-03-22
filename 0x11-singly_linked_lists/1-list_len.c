@@ -12,6 +12,9 @@ size_t list_len(const list_t *h)
 	int n = 0;
 
 	iterator = h;
+	if (!iterator)
+		return (0);
+
 	while (iterator)
 	{
 		n++;
