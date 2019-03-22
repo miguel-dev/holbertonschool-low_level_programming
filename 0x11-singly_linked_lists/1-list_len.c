@@ -9,7 +9,7 @@
 size_t list_len(const list_t *h)
 {
 	const list_t *iterator;
-	int n = 0;
+	size_t = 0;
 
 	iterator = h;
 	if (!iterator)
