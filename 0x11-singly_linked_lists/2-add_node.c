@@ -20,7 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 		free(node);
 		return (NULL);
 	}
-	
+
 	string = strdup(str);
 	if (!string)
 	{
@@ -34,7 +34,7 @@ list_t *add_node(list_t **head, const char *str)
 		i++;
 	}
 	node->len = i;
-	node->next = (*head);
-	(*head) = node;
+	node->next = *head;
+	*head = node;
 	return (node);
 }
