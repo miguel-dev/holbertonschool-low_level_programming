@@ -25,6 +25,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	node->n = n;
 
+	if (idx == 0)
+	{
+		node->next = *head;
+		return (node);
+	}
+
 	iterator = *head;
 	while (iterator->next != NULL && c < idx)
 	{
@@ -33,15 +39,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		c = c + 1;
 	}
 
-	if (c + 1 != idx)
+	if (c + 1 < idx)
 	{
 		free(node);
 		return (NULL);
 	}
 	else
 	{
-		before->next = node;
 		node->next = iterator;
+		before->next = node;
 	}
 	return (node);
 }
