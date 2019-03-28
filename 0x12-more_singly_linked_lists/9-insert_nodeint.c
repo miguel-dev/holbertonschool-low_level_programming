@@ -124,6 +124,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	node->n = n;
 
 	current = get_nodeint_at_index(*head, idx);
+	if (current == NULL)
+		return (NULL);
+
 	if (current->next == NULL)
 	{
 		node = add_nodeint_at_end(head, n);
@@ -131,9 +134,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	previous = get_nodeint_at_index(*head, idx - 1);
-
-	if (current == NULL)
-		return (NULL);
 
 	node->next = current;
 	previous->next = node;
