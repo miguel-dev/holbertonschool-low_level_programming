@@ -49,6 +49,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		*head = (*head)->next;
 		node->next = NULL;
 		free(node);
+		return (1);
 	}
 
 	previous = get_nodeint_at_index(*head, index - 1);
