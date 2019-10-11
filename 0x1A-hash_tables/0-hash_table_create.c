@@ -13,14 +13,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	h = malloc(sizeof(hash_table_t));
 	if (h == NULL)
-	{
 		return (NULL);
-	}
+
 	n = malloc(size * sizeof(hash_node_t *));
 	if (n == NULL)
-	{
 		return (NULL);
-	}
+
 	h->array = n;
 	h->size = size;
 	return (h);
