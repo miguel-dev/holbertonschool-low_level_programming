@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	l = ht->array[index];
 	while (l)
 	{
-		if (l->key == key)
+		if (strcmp(l->key, key) == 0)
 		{
 			l->value = (char *)value;
 			return (1);
