@@ -10,14 +10,20 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *h;
 	hash_node_t **n;
+	unsigned long int i;
 
 	h = malloc(sizeof(hash_table_t));
 	if (h == NULL)
 		return (NULL);
 
-	n = calloc(size, size * sizeof(hash_node_t *));
+	n = malloc(size * sizeof(hash_node_t *));
 	if (n == NULL)
 		return (NULL);
+
+	for (i = 0; i < size; i++)
+	{
+		n[i] = NULL;
+	}
 
 	h->array = n;
 	h->size = size;
